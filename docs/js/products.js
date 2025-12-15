@@ -139,9 +139,17 @@ class ProductCatalog {
         const category = button.getAttribute('data-category');
         this.currentCategory = category;
         
-        // Update active state
-        filterButtons.forEach(btn => btn.classList.remove('bg-accent-500', 'text-white'));
-        button.classList.add('bg-accent-500', 'text-white');
+        // Update active/inactive states
+        filterButtons.forEach(btn => {
+          // Remove active classes
+          btn.classList.remove('bg-accent-500', 'text-white', 'shadow-lg', 'shadow-accent-500/20');
+          // Add inactive classes
+          btn.classList.add('bg-dark-700', 'text-gray-300');
+        });
+        
+        // Set clicked button as active
+        button.classList.remove('bg-dark-700', 'text-gray-300');
+        button.classList.add('bg-accent-500', 'text-white', 'shadow-lg', 'shadow-accent-500/20');
         
         this.filterProducts();
       });
