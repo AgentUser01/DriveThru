@@ -4,7 +4,7 @@ package-lock.json
 yarn.lock
 
 # Build outputs
-docs/css/output.css
+# docs/css/output.css is tracked because it's needed for GitHub Pages deployment
 # Keep docs/js files tracked (they're needed for deployment)
 
 # IDE
