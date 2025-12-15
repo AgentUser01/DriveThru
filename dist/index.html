@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Drive Thru - Your local drive-through vape & smoke shop in Kahnawake, Quebec. Premium e-cigarettes, e-liquids, cigarettes, and accessories with convenient drive-thru service.">
+  <meta name="keywords" content="vape shop Kahnawake, smoke shop Quebec, drive-through vape, e-cigarettes Montreal, JUUL Kahnawake">
+  <meta name="author" content="Drive Thru">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Drive Thru - Kahnawake's Drive-Through Vape & Smoke Shop">
+  <meta property="og:description" content="Premium vape products and cigarettes with convenient drive-thru service in Kahnawake, Quebec.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://drivethruvape.ca">
+  
+  <title>Drive Thru - Your Local Drive-Through Vape & Smoke Shop | Kahnawake, QC</title>
+  
+  <link rel="stylesheet" href="css/output.css">
+  <link rel="icon" href="favicon.ico">
+</head>
+<body>
+  <!-- Skip to main content for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Age Verification Modal -->
+  <div id="age-gate-modal" class="hidden modal-overlay" role="dialog" aria-modal="true" aria-labelledby="age-gate-title" aria-hidden="true">
+    <div class="modal-content p-8">
+      <div class="text-center mb-6">
+        <div class="text-6xl mb-4">🚬</div>
+        <h1 id="age-gate-title" class="text-3xl font-bold mb-2">Age Verification Required</h1>
+        <p class="text-gray-400">You must be of legal age to enter this website.</p>
+      </div>
+      
+      <div id="age-gate-error" class="hidden health-warning mb-4" role="alert">
+        <strong>Access Denied:</strong> You must be at least 18 years old to access this website. You will be redirected shortly.
+      </div>
+      
+      <div class="health-warning mb-6">
+        <strong>⚠️ Health Warning:</strong> Tobacco and vaping products contain nicotine, a highly addictive chemical. Health Canada requires that we verify your age before granting access to this website.
+      </div>
+      
+      <div class="text-center mb-6">
+        <p class="text-xl font-semibold text-white mb-4">Are you 18 years of age or older?</p>
+        <div class="flex gap-3">
+          <button id="age-gate-confirm" class="btn-primary flex-1 text-lg py-4">
+            Yes, I'm 18+
+          </button>
+          <button id="age-gate-decline" class="btn-outline flex-1 text-lg py-4">
+            No, I'm Under 18
+          </button>
+        </div>
+      </div>
+      
+      <p class="text-xs text-gray-500 text-center">
+        By entering this site, you agree to our <a href="terms.html" class="text-accent-500 underline">Terms of Service</a> and <a href="privacy.html" class="text-accent-500 underline">Privacy Policy</a>.
+      </p>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="bg-dark-900 border-b border-dark-800 sticky top-0 z-40 transition-shadow shadow-lg">
+    <div class="container-custom">
+      <!-- Top bar with contact info -->
+      <div class="hidden md:flex justify-between items-center py-2 text-sm text-gray-400 border-b border-dark-800">
+        <div class="flex gap-6">
+          <a href="tel:+14502900340" class="hover:text-white transition-colors">📞 (450) 290-0340</a>
+          <span>📍 Kahnawake, Quebec</span>
+        </div>
+        <div class="flex gap-4">
+          <!-- Social media links removed -->
+        </div>
+      </div>
+      
+      <!-- Main navigation -->
+      <nav class="flex items-center justify-between py-4" aria-label="Main navigation">
+        <a href="index.html" class="text-2xl font-display font-bold text-white tracking-tight">
+          Drive <span class="text-accent-500">Thru</span>
+        </a>
+        
+        <!-- Desktop navigation -->
+        <ul class="hidden lg:flex items-center gap-8">
+          <li><a href="index.html" class="nav-link nav-link-active">Home</a></li>
+          <li><a href="shop.html" class="nav-link">Shop</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="drive-thru.html" class="nav-link">How It Works</a></li>
+          <li><a href="lottery.html" class="nav-link text-yellow-500 font-bold">Lottery</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        
+        <!-- Search bar -->
+        <div class="hidden md:block relative">
+          <input 
+            type="search" 
+            id="search-input" 
+            placeholder="Search products..." 
+            class="input py-2 px-4 pr-10 w-64 rounded-full"
+            aria-label="Search products"
+          >
+          <span class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400">🔍</span>
+          <div id="search-results" class="hidden absolute top-full mt-2 w-full bg-dark-800 border border-dark-600 rounded-lg shadow-xl max-h-96 overflow-y-auto z-50"></div>
+        </div>
+        
+        <!-- Mobile menu toggle -->
+        <button 
+          id="mobile-menu-toggle" 
+          class="lg:hidden p-2 text-gray-300 hover:text-white"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Toggle menu"
+        >
+          <svg class="w-6 h-6 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </nav>
+      
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden lg:hidden pb-4">
+        <ul class="space-y-3">
+          <li><a href="index.html" class="nav-link block py-2 text-accent-500">Home</a></li>
+          <li><a href="shop.html" class="nav-link block py-2">Shop</a></li>
+          <li><a href="about.html" class="nav-link block py-2">About Us</a></li>
+          <li><a href="drive-thru.html" class="nav-link block py-2">How It Works</a></li>
+          <li><a href="lottery.html" class="nav-link block py-2 text-yellow-500 font-bold">Lottery</a></li>
+          <li><a href="blog.html" class="nav-link block py-2">Blog</a></li>
+          <li><a href="contact.html" class="nav-link block py-2">Contact</a></li>
+        </ul>
+        <div class="mt-4">
+          <input 
+            type="search" 
+            placeholder="Search products..." 
+            class="input w-full rounded-full"
+            aria-label="Search products"
+          >
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-dark-900 via-dark-800 to-dark-900 overflow-hidden">
+      <div class="absolute inset-0 opacity-20">
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzMzMyIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')]"></div>
+      </div>
+      
+      <div class="container-custom relative">
+        <div class="py-24 md:py-40 text-center">
+          <h1 class="section-heading text-white text-shadow-lg animate-fadeIn">
+            Your Local Drive-Through<br>Vape & Smoke Shop
+          </h1>
+          <p class="section-subheading max-w-3xl mx-auto animate-fadeIn text-xl" style="animation-delay: 0.2s;">
+            Build your order online, drive up to the window, and show us your list. <br class="hidden md:inline">Premium products with the convenience you deserve.
+          </p>
+          <div class="flex flex-wrap justify-center gap-6 mt-10 animate-fadeIn" style="animation-delay: 0.4s;">
+            <a href="shop.html" class="btn-primary text-lg px-10 py-5 shadow-xl hover:shadow-2xl hover:scale-105 transition-transform">Start Your Order</a>
+            <a href="drive-thru.html" class="btn-outline text-lg px-8 py-5">How It Works</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="section bg-dark-900">
+      <div class="container-custom">
+        <h2 class="section-heading text-center">Shop by Category</h2>
+        <p class="section-subheading text-center max-w-2xl mx-auto">
+          Find exactly what you need with our organized product categories
+        </p>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <a href="shop.html?category=e-cigarettes" class="card p-8 text-center group border-dark-700/50 hover:border-accent-500/50">
+            <div class="text-7xl mb-6 transform transition-transform group-hover:scale-110 duration-300">🚬</div>
+            <h3 class="font-bold text-xl mb-2 text-white group-hover:text-accent-500 transition-colors">E-Cigarettes</h3>
+            <p class="text-gray-400 text-sm">Devices & Starter Kits</p>
+          </a>
+          
+          <a href="shop.html?category=e-liquids" class="card p-8 text-center group border-dark-700/50 hover:border-accent-500/50">
+            <div class="text-7xl mb-6 transform transition-transform group-hover:scale-110 duration-300">💧</div>
+            <h3 class="font-bold text-xl mb-2 text-white group-hover:text-accent-500 transition-colors">E-Liquids</h3>
+            <p class="text-gray-400 text-sm">Premium Flavors</p>
+          </a>
+          
+          <a href="shop.html?category=cigarettes" class="card p-8 text-center group border-dark-700/50 hover:border-accent-500/50">
+            <div class="text-7xl mb-6 transform transition-transform group-hover:scale-110 duration-300">📦</div>
+            <h3 class="font-bold text-xl mb-2 text-white group-hover:text-accent-500 transition-colors">Cigarettes</h3>
+            <p class="text-gray-400 text-sm">Top Brands</p>
+          </a>
+          
+          <a href="shop.html?category=accessories" class="card p-8 text-center group border-dark-700/50 hover:border-accent-500/50">
+            <div class="text-7xl mb-6 transform transition-transform group-hover:scale-110 duration-300">🔧</div>
+            <h3 class="font-bold text-xl mb-2 text-white group-hover:text-accent-500 transition-colors">Accessories</h3>
+            <p class="text-gray-400 text-sm">Coils, Chargers & More</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Promotions -->
+    <section class="section bg-gradient-to-r from-dark-800 to-primary-900 relative overflow-hidden">
+      <div class="absolute top-0 right-0 w-64 h-64 bg-accent-500/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 left-0 w-64 h-64 bg-primary-500/10 rounded-full blur-3xl"></div>
+      
+      <div class="container-custom relative z-10">
+        <div class="text-center max-w-3xl mx-auto">
+          <span class="badge-sale text-lg px-6 py-2 mb-6 inline-block shadow-lg">Limited Time Offer</span>
+          <h2 class="section-heading">In-Store Specials</h2>
+          <p class="text-xl mb-8 text-gray-200">Visit our drive-thru today to see our latest deals and <span class="text-accent-500 font-bold">new arrivals</span>!</p>
+          <a href="shop.html" class="btn-primary text-lg px-8 py-4 shadow-lg">Browse Products</a>
+          
+          <div class="health-warning mt-10 bg-black/30 border-none backdrop-blur-sm">
+            <strong>⚠️ Health Warning:</strong> This product contains nicotine. Nicotine is an addictive chemical.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section bg-dark-900">
+      <div class="container-custom">
+        <h2 class="section-heading text-center">Why Choose Drive Thru?</h2>
+        <p class="section-subheading text-center max-w-2xl mx-auto">
+          We're more than just a vape shop - we're your community partner
+        </p>
+        
+        <div class="grid md:grid-cols-3 gap-12 mt-16">
+          <div class="text-center p-6 rounded-xl bg-dark-800 border border-dark-700 hover:-translate-y-2 transition-transform duration-300">
+            <div class="text-6xl mb-6">🚗</div>
+            <h3 class="text-2xl font-bold mb-4 text-white">Drive-Through Convenience</h3>
+            <p class="text-gray-400 leading-relaxed">No need to leave your car. Build your order online and pick up at our window for fast service.</p>
+          </div>
+          
+          <div class="text-center p-6 rounded-xl bg-dark-800 border border-dark-700 hover:-translate-y-2 transition-transform duration-300">
+            <div class="text-6xl mb-6">⭐</div>
+            <h3 class="text-2xl font-bold mb-4 text-white">Premium Quality</h3>
+            <p class="text-gray-400 leading-relaxed">We stock only the best brands and authentic products you can trust. No counterfeits, ever.</p>
+          </div>
+          
+          <div class="text-center p-6 rounded-xl bg-dark-800 border border-dark-700 hover:-translate-y-2 transition-transform duration-300">
+            <div class="text-6xl mb-6">🏘️</div>
+            <h3 class="text-2xl font-bold mb-4 text-white">Community Focused</h3>
+            <p class="text-gray-400 leading-relaxed">Proudly serving Kahnawake and supporting our local community with responsible sales.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Customer Reviews -->
+    <section class="section bg-dark-800">
+      <div class="container-custom">
+        <h2 class="section-heading text-center">What Our Customers Say</h2>
+        <p class="section-subheading text-center max-w-2xl mx-auto">
+          Real reviews from real customers
+        </p>
+        
+        <div class="grid md:grid-cols-3 gap-8 mt-12">
+          <div class="card p-8">
+            <div class="star-rating mb-4 text-xl">★★★★★</div>
+            <p class="text-gray-300 mb-6 italic leading-relaxed">"The drive-through service is a game changer! I built my order on my phone, pulled up, and was done in 2 minutes. Fast, friendly, and efficient."</p>
+            <p class="font-bold text-white text-lg">- Sarah M.</p>
+          </div>
+          
+          <div class="card p-8">
+            <div class="star-rating mb-4 text-xl">★★★★★</div>
+            <p class="text-gray-300 mb-6 italic leading-relaxed">"Best selection of e-liquids in the area. The staff really knows their products and helped me find exactly what I needed."</p>
+            <p class="font-bold text-white text-lg">- Mike D.</p>
+          </div>
+          
+          <div class="card p-8">
+            <div class="star-rating mb-4 text-xl">★★★★★</div>
+            <p class="text-gray-300 mb-6 italic leading-relaxed">"Great prices and service! I've saved so much money. The new website makes it super easy to check what's in stock before I go."</p>
+            <p class="font-bold text-white text-lg">- Jessica L.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="section bg-dark-900 border-t border-dark-800">
+      <div class="container-custom">
+        <div class="max-w-3xl mx-auto text-center bg-dark-800 p-10 rounded-2xl border border-dark-700 shadow-2xl">
+          <h2 class="text-3xl font-bold mb-4 text-white">Stay Updated</h2>
+          <p class="text-gray-400 mb-8 text-lg">Subscribe to our newsletter for exclusive promotions and new product announcements.</p>
+          
+          <form class="flex flex-col sm:flex-row gap-4">
+            <input 
+              type="email" 
+              placeholder="Enter your email address" 
+              class="input flex-1 py-4"
+              required
+              aria-label="Email address"
+            >
+            <button type="submit" class="btn-primary whitespace-nowrap px-8 py-4 shadow-lg">Subscribe</button>
+          </form>
+          
+          <p class="text-xs text-gray-500 mt-6">
+            We respect your privacy. Unsubscribe at any time.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark-900 border-t border-dark-800">
+    <div class="container-custom py-16">
+      <div class="grid md:grid-cols-4 gap-12 mb-12">
+        <!-- About -->
+        <div>
+          <h3 class="font-bold text-xl mb-6 text-white">Drive Thru</h3>
+          <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+            Your trusted local vape and smoke shop in Kahnawake, Quebec. Premium products with drive-through convenience.
+          </p>
+          <!-- Social media links removed -->
+        </div>
+        
+        <!-- Quick Links -->
+        <div>
+          <h3 class="font-bold text-xl mb-6 text-white">Quick Links</h3>
+          <ul class="space-y-3 text-sm">
+            <li><a href="shop.html" class="text-gray-400 hover:text-white transition-colors">Shop All Products</a></li>
+            <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+            <li><a href="drive-thru.html" class="text-gray-400 hover:text-white transition-colors">How It Works</a></li>
+            <li><a href="lottery.html" class="text-yellow-500 hover:text-white transition-colors font-bold">Lottery</a></li>
+            <li><a href="events.html" class="text-gray-400 hover:text-white transition-colors">Events</a></li>
+          </ul>
+        </div>
+        
+        <!-- Support -->
+        <div>
+          <h3 class="font-bold text-xl mb-6 text-white">Support</h3>
+          <ul class="space-y-3 text-sm">
+            <li><a href="faq.html" class="text-gray-400 hover:text-white transition-colors">FAQs</a></li>
+            <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
+            <li><a href="terms.html" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
+            <li><a href="privacy.html" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+            <li><a href="returns.html" class="text-gray-400 hover:text-white transition-colors">Returns & Refunds</a></li>
+          </ul>
+        </div>
+        
+        <!-- Contact Info -->
+        <div>
+          <h3 class="font-bold text-xl mb-6 text-white">Contact</h3>
+          <ul class="space-y-3 text-sm text-gray-400">
+            <li class="flex items-start gap-3">
+              <span>📍</span>
+              <span>Route 207, Junction (sud)<br>Kahnawake, QC J0L 1B0</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span>📞</span>
+              <a href="tel:+14502900340" class="hover:text-white transition-colors">(450) 290-0340</a>
+            </li>
+            <li class="flex items-center gap-3">
+              <span>✉️</span>
+              <a href="mailto:info@drivethruvape.ca" class="hover:text-white transition-colors">info@drivethruvape.ca</a>
+            </li>
+            <li class="pt-4 border-t border-dark-800 mt-4">
+              <strong class="text-white block mb-1">Hours:</strong>
+              Open Daily: 8 AM - 10 PM<br>
+              Monday - Sunday
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Health Warning -->
+      <div class="health-warning mb-8">
+        <strong>⚠️ Mandatory Health Warning:</strong> Tobacco products and vaping products contain nicotine, a highly addictive chemical. Health Canada advises that nicotine can harm adolescent brain development. For adults only (18+).
+      </div>
+      
+      <!-- Copyright -->
+      <div class="border-t border-dark-800 pt-8 text-center text-sm text-gray-500">
+        <p>&copy; 2025 Drive Thru. All rights reserved. | Kahnawake, Quebec</p>
+        <p class="mt-2">We comply with all Canadian federal and provincial tobacco and vaping regulations.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/age-gate.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/order-builder.js"></script>
+</body>
+</html>

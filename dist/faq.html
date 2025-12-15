@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Frequently asked questions about Drive Thru vape shop. Learn about age requirements, returns, payments, drive-through service, and more.">
+  
+  <title>FAQs - Drive Thru | Common Questions Answered</title>
+  
+  <link rel="stylesheet" href="css/output.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Age Verification Modal -->
+  <div id="age-gate-modal" class="hidden modal-overlay" role="dialog" aria-modal="true" aria-labelledby="age-gate-title" aria-hidden="true">
+    <div class="modal-content p-8">
+      <div class="text-center mb-6">
+        <div class="text-6xl mb-4">🚬</div>
+        <h1 id="age-gate-title" class="text-3xl font-bold mb-2">Age Verification Required</h1>
+        <p class="text-gray-400">You must be of legal age to enter this website.</p>
+      </div>
+      
+      <div id="age-gate-error" class="hidden health-warning mb-4" role="alert">
+        <strong>Access Denied:</strong> You must be at least 18 years old to access this website. You will be redirected shortly.
+      </div>
+      
+      <div class="health-warning mb-6">
+        <strong>⚠️ Health Warning:</strong> Tobacco and vaping products contain nicotine, a highly addictive chemical. Health Canada requires that we verify your age before granting access to this website.
+      </div>
+      
+      <div class="text-center mb-6">
+        <p class="text-xl font-semibold text-white mb-4">Are you 18 years of age or older?</p>
+        <div class="flex gap-3">
+          <button id="age-gate-confirm" class="btn-primary flex-1 text-lg py-4">
+            Yes, I'm 18+
+          </button>
+          <button id="age-gate-decline" class="btn-outline flex-1 text-lg py-4">
+            No, I'm Under 18
+          </button>
+        </div>
+      </div>
+      
+      <p class="text-xs text-gray-500 text-center">
+        By entering this site, you agree to our <a href="terms.html" class="text-accent-500 underline">Terms of Service</a> and <a href="privacy.html" class="text-accent-500 underline">Privacy Policy</a>.
+      </p>
+    </div>
+  </div>
+
+  <!-- Header (same structure) -->
+  <header class="bg-dark-800 border-b border-dark-700 sticky top-0 z-40">
+    <div class="container-custom">
+      <div class="hidden md:flex justify-between items-center py-2 text-sm text-gray-400 border-b border-dark-700">
+        <div class="flex gap-6">
+          <a href="tel:+14502900340" class="hover:text-white transition-colors">📞 (450) 290-0340</a>
+          <span>📍 Kahnawake, Quebec</span>
+        </div>
+        <div class="flex gap-4">
+          <!-- Social media links removed -->
+        </div>
+      </div>
+      
+      <nav class="flex items-center justify-between py-4" aria-label="Main navigation">
+        <a href="index.html" class="text-2xl font-display font-bold text-white">
+          Drive <span class="text-accent-500">Thru</span>
+        </a>
+        
+        <ul class="hidden lg:flex items-center gap-8">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="shop.html" class="nav-link">Shop</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="drive-thru.html" class="nav-link">How It Works</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        
+        <div class="hidden md:block relative">
+          <input type="search" id="search-input" placeholder="Search products..." class="input py-2 px-4 pr-10 w-64" aria-label="Search products">
+          <span class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400">🔍</span>
+          <div id="search-results" class="hidden absolute top-full mt-2 w-full bg-dark-800 border border-dark-600 rounded-lg shadow-xl max-h-96 overflow-y-auto z-50"></div>
+        </div>
+        
+        <button id="mobile-menu-toggle" class="lg:hidden p-2 text-gray-300 hover:text-white" aria-expanded="false" aria-label="Toggle menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </nav>
+      
+      <div id="mobile-menu" class="hidden lg:hidden pb-4">
+        <ul class="space-y-3">
+          <li><a href="index.html" class="nav-link block py-2">Home</a></li>
+          <li><a href="shop.html" class="nav-link block py-2">Shop</a></li>
+          <li><a href="about.html" class="nav-link block py-2">About Us</a></li>
+          <li><a href="drive-thru.html" class="nav-link block py-2">How It Works</a></li>
+          <li><a href="blog.html" class="nav-link block py-2">Blog</a></li>
+          <li><a href="contact.html" class="nav-link block py-2">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero -->
+    <section class="bg-gradient-to-br from-dark-900 to-dark-800 py-16">
+      <div class="container-custom text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Frequently Asked Questions</h1>
+        <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+          Find answers to common questions about our products, policies, and services
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ Categories -->
+    <section class="section bg-dark-900">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto">
+          <!-- Age Requirements -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold mb-6 text-accent-500">📝 Age Requirements &amp; Verification</h2>
+            <div class="space-y-4">
+              <details class="card p-6 group">
+                <summary class="font-bold text-lg cursor-pointer list-none flex justify-between items-center">
+                  What is the legal age to purchase tobacco and vaping products in Quebec?
+                  <span class="text-2xl group-open:rotate-180 transition-transform">›</span>
+                </summary>
+                <p class="text-gray-300 mt-4">
+                  You must be at least 18 years old to purchase tobacco and vaping products in Quebec. This is mandated by provincial law and strictly enforced at all times.
+                </p>
+              </details>
+              
+              <details class="card p-6 group">
+                <summary class="font-bold text-lg cursor-pointer list-none flex justify-between items-center">
+                  What forms of ID do you accept?
+                  <span class="text-2xl group-open:rotate-180 transition-transform">›</span>
+                </summary>
+                <p class="text-gray-300 mt-4">
+                  We accept government-issued photo identification including: Quebec driver's license, Canadian passport, Canadian citizenship card, Permanent Resident card, provincial ID card, or foreign passport. The ID must be current and not expired.
+                </p>
+              </details>
+              
+              <details class="card p-6 group">
+                <summary class="font-bold text-lg cursor-pointer list-none flex justify-between items-center">
+                  Do I need to show ID every time I visit?
+                  <span class="text-2xl group-open:rotate-180 transition-transform">›</span>
+                </summary>
+                <p class="text-gray-300 mt-4">
+                  Yes. We are required by law to verify age for every tobacco and vaping product transaction, even for regular customers. This ensures compliance and protects both you and our business.
+                </p>
+              </details>
+            </div>
+          </div>
+
+          <!-- Products -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold mb-6 text-accent-500">🛍️ Products &amp; Inventory</h2>
+            <div class="space-y-4">
+              <details class="card p-6 group">
+                <summary class="font-bold text-lg cursor-pointer list-none flex justify-between items-center">
+                  Are all products authentic and not counterfeit?
+                  <span class="text-2xl group-open:rotate-180 transition-transform">›</span>
+                </summary>
+                <p class="text-gray-300 mt-4">
+                  Absolutely. We only source products from authorized distributors and manufacturers. All products come with proper authentication and we guarantee 100% authenticity.
+                </p>
+              </details>
+              
+              <details class="card p-6 group">
+                <summary class="font-bold text-lg cursor-pointer list-none flex justify-between items-center">
+                  How can I check if a product is in stock?
+                  <span class="text-2xl group-open:rotate-180 transition-transform">›</span>
+                </summary>
+                <p class="text-gray-300 mt-4">
+                  Call us at (450) 290-0340 during business hours and our staff will be happy to check inventory for you. You can also ask during your drive-through visit.
+                </p>
+              </details>
+              
+              <details class="card p-6 group">
+                <summary class="font-bold text-lg cursor-pointer list-none flex justify-between items-center">
+                  Do you carry devices for beginners?
+                  <span class="text-2xl group-open:rotate-180 transition-transform">›</span>
+                </summary>
+                <p class="text-gray-300 mt-4">
+                  Yes! We carry a wide range of devices suitable for all experience levels. Our staff can recommend beginner-friendly devices and help you choose the right nicotine strength and flavors.
+                </p>
+              </details>
+            </div>
+          </div>
+
+          <!-- Payment & Pricing -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold mb-6 text-accent-500">💳 Payment &amp; Pricing</h2>
+            <div class="space-y-4">
+              <details class="card p-6 group">
+                <summary class="font-bold text-lg cursor-pointer list-none flex justify-between items-center">
+                  What payment methods do you accept?
+                  <span class="text-2xl group-open:rotate-180 transition-transform">›</span>
+                </summary>
+                <p class="text-gray-300 mt-4">
+                  We accept cash, debit cards (Interac), and all major credit cards including Visa, Mastercard, and American Express.
+                </p>
+              </details>
+              
+              <details class="card p-6 group">
+                <summary class="font-bold text-lg cursor-pointer list-none flex justify-between items-center">
+                  Are prices online the same as in-store?
+                  <span class="text-2xl group-open:rotate-180 transition-transform">›</span>
+                </summary>
+                <p class="text-gray-300 mt-4">
+                  Prices listed on our website are accurate at the time of posting but may be subject to change. For the most current pricing, please call us or visit in person.
+                </p>
+              </details>
+              
+              <details class="card p-6 group">
+                <summary class="font-bold text-lg cursor-pointer list-none flex justify-between items-center">
+                  Do you offer price matching?
+                  <span class="text-2xl group-open:rotate-180 transition-transform">›</span>
+                </summary>
+                <p class="text-gray-300 mt-4">
+                  We strive to offer competitive prices. While we don't have a formal price matching policy, please speak with our staff if you have concerns about pricing.
+                </p>
+              </details>
+            </div>
+          </div>
+
+          <!-- Returns & Refunds -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold mb-6 text-accent-500">↩️ Returns &amp; Refunds</h2>
+            <div class="space-y-4">
+              <details class="card p-6 group">
+                <summary class="font-bold text-lg cursor-pointer list-none flex justify-between items-center">
+                  What is your return policy?
+                  <span class="text-2xl group-open:rotate-180 transition-transform">›</span>
+                </summary>
+                <p class="text-gray-300 mt-4">
+                  Due to health and safety regulations, we cannot accept returns on opened vaping or tobacco products. Unopened products may be returned within 7 days with original receipt. Defective devices may be exchanged within 14 days.
+                </p>
+              </details>
+              
+              <details class="card p-6 group">
+                <summary class="font-bold text-lg cursor-pointer list-none flex justify-between items-center">
+                  What if I receive a defective product?
+                  <span class="text-2xl group-open:rotate-180 transition-transform">›</span>
+                </summary>
+                <p class="text-gray-300 mt-4">
+                  If you receive a defective product, bring it back with your receipt within 14 days and we will exchange it for a new one or provide a full refund. Manufacturer warranties may also apply to certain devices.
+                </p>
+              </details>
+              
+              <details class="card p-6 group">
+                <summary class="font-bold text-lg cursor-pointer list-none flex justify-between items-center">
+                  Can I exchange a flavor I don't like?
+                  <span class="text-2xl group-open:rotate-180 transition-transform">›</span>
+                </summary>
+                <p class="text-gray-300 mt-4">
+                  Unfortunately, once e-liquid or pod products are opened, they cannot be returned or exchanged for health and safety reasons. We recommend trying smaller sizes or sample packs when trying new flavors.
+                </p>
+              </details>
+            </div>
+          </div>
+
+          <!-- Drive-Thru Service -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold mb-6 text-accent-500">🚗 Drive-Thru Service</h2>
+            <div class="space-y-4">
+              <details class="card p-6 group">
+                <summary class="font-bold text-lg cursor-pointer list-none flex justify-between items-center">
+                  How does the drive-through work?
+                  <span class="text-2xl group-open:rotate-180 transition-transform">›</span>
+                </summary>
+                <p class="text-gray-300 mt-4">
+                  Simply drive up to our window, show your ID, place your order with our staff, pay, and receive your products—all without leaving your vehicle! See our <a href="drive-thru.html" class="text-accent-400 underline">How It Works</a> page for details.
+                </p>
+              </details>
+              
+              <details class="card p-6 group">
+                <summary class="font-bold text-lg cursor-pointer list-none flex justify-between items-center">
+                  Is there a wait time?
+                  <span class="text-2xl group-open:rotate-180 transition-transform">›</span>
+                </summary>
+                <p class="text-gray-300 mt-4">
+                  Most orders are completed in just a few minutes. Wait times may vary during peak hours, but we work hard to keep service fast and efficient.
+                </p>
+              </details>
+              
+              <details class="card p-6 group">
+                <summary class="font-bold text-lg cursor-pointer list-none flex justify-between items-center">
+                  Can I walk in or do I have to use the drive-through?
+                  <span class="text-2xl group-open:rotate-180 transition-transform">›</span>
+                </summary>
+                <p class="text-gray-300 mt-4">
+                  We primarily operate as a drive-through for convenience and safety, but walk-in service may be available during certain hours. Please call ahead to confirm.
+                </p>
+              </details>
+            </div>
+          </div>
+
+          <!-- Health & Safety -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold mb-6 text-accent-500">🏥 Health &amp; Safety</h2>
+            <div class="space-y-4">
+              <details class="card p-6 group">
+                <summary class="font-bold text-lg cursor-pointer list-none flex justify-between items-center">
+                  Are vaping products safer than cigarettes?
+                  <span class="text-2xl group-open:rotate-180 transition-transform">›</span>
+                </summary>
+                <p class="text-gray-300 mt-4">
+                  According to Health Canada, while vaping is generally considered less harmful than smoking cigarettes, it is not risk-free. Vaping products contain nicotine, which is highly addictive. We recommend consulting health professionals for personal advice.
+                </p>
+              </details>
+              
+              <details class="card p-6 group">
+                <summary class="font-bold text-lg cursor-pointer list-none flex justify-between items-center">
+                  Is nicotine addictive?
+                  <span class="text-2xl group-open:rotate-180 transition-transform">›</span>
+                </summary>
+                <p class="text-gray-300 mt-4">
+                  Yes. Nicotine is a highly addictive chemical. Health Canada warns that nicotine can harm adolescent brain development and create dependence. Products should only be used by adults 18+ who are already smokers or vapers.
+                </p>
+              </details>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="section bg-dark-800">
+      <div class="container-custom text-center">
+        <h2 class="text-3xl font-bold mb-4">Still Have Questions?</h2>
+        <p class="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
+          Our friendly staff are here to help. Contact us anytime!
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="contact.html" class="btn-primary text-lg px-8 py-4">Contact Us</a>
+          <a href="tel:+14502900340" class="btn-outline text-lg px-8 py-4">Call (450) 290-0340</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark-800 border-t border-dark-700">
+    <div class="container-custom py-12">
+      <div class="grid md:grid-cols-4 gap-8 mb-8">
+        <div>
+          <h3 class="font-bold text-lg mb-4">Drive Thru</h3>
+          <p class="text-gray-400 text-sm mb-4">
+            Your trusted local vape and smoke shop in Kahnawake, Quebec. Premium products with drive-through convenience.
+          </p>
+          <!-- Social media links removed -->
+        </div>
+        
+        <div>
+          <h3 class="font-bold text-lg mb-4">Quick Links</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="shop.html" class="text-gray-400 hover:text-white transition-colors">Shop All Products</a></li>
+            <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+            <li><a href="drive-thru.html" class="text-gray-400 hover:text-white transition-colors">How It Works</a></li>
+            <li><a href="events.html" class="text-gray-400 hover:text-white transition-colors">Events</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="font-bold text-lg mb-4">Support</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="faq.html" class="text-gray-400 hover:text-white transition-colors">FAQs</a></li>
+            <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
+            <li><a href="terms.html" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
+            <li><a href="privacy.html" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="font-bold text-lg mb-4">Contact</h3>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li>📍 Route 207, Junction (sud<br>Kahnawake, QC J0L 1B0</li>
+            <li>📞 <a href="tel:+14502900340" class="hover:text-white transition-colors">(450) 290-0340</a></li>
+            <li>✉️ <a href="mailto:info@drivethruvape.ca" class="hover:text-white transition-colors">info@drivethruvape.ca</a></li>
+            <li class="pt-2">
+              <strong class="text-white">Hours:</strong><br>
+              Open Daily: 8 AM - 10 PM<br>
+              Monday - Sunday
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="health-warning mb-6">
+        <strong>⚠️ Mandatory Health Warning:</strong> Tobacco products and vaping products contain nicotine, a highly addictive chemical. Health Canada advises that nicotine can harm adolescent brain development. For adults only (18+).
+      </div>
+      
+      <div class="border-t border-dark-700 pt-6 text-center text-sm text-gray-500">
+        <p>&copy; 2025 Drive Thru. All rights reserved. | Kahnawake, Quebec</p>
+        <p class="mt-2">We comply with all Canadian federal and provincial tobacco and vaping regulations.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/age-gate.js"></script>
+  <script src="js/navigation.js"></script>
+</body>
+</html>
+

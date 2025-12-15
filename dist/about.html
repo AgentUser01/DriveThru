@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about Drive Thru - Kahnawake's premier drive-through vape and smoke shop. Community-focused, quality products, convenient service.">
+  
+  <title>About Us - Drive Thru | Kahnawake's Drive-Through Vape Shop</title>
+  
+  <link rel="stylesheet" href="css/output.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Age Verification Modal -->
+  <div id="age-gate-modal" class="hidden modal-overlay" role="dialog" aria-modal="true" aria-labelledby="age-gate-title" aria-hidden="true">
+    <div class="modal-content p-8">
+      <div class="text-center mb-6">
+        <div class="text-6xl mb-4">🚬</div>
+        <h1 id="age-gate-title" class="text-3xl font-bold mb-2">Age Verification Required</h1>
+        <p class="text-gray-400">You must be of legal age to enter this website.</p>
+      </div>
+      
+      <div id="age-gate-error" class="hidden health-warning mb-4" role="alert">
+        <strong>Access Denied:</strong> You must be at least 18 years old to access this website. You will be redirected shortly.
+      </div>
+      
+      <div class="health-warning mb-6">
+        <strong>⚠️ Health Warning:</strong> Tobacco and vaping products contain nicotine, a highly addictive chemical. Health Canada requires that we verify your age before granting access to this website.
+      </div>
+      
+      <div class="text-center mb-6">
+        <p class="text-xl font-semibold text-white mb-4">Are you 18 years of age or older?</p>
+        <div class="flex gap-3">
+          <button id="age-gate-confirm" class="btn-primary flex-1 text-lg py-4">
+            Yes, I'm 18+
+          </button>
+          <button id="age-gate-decline" class="btn-outline flex-1 text-lg py-4">
+            No, I'm Under 18
+          </button>
+        </div>
+      </div>
+      
+      <p class="text-xs text-gray-500 text-center">
+        By entering this site, you agree to our <a href="terms.html" class="text-accent-500 underline">Terms of Service</a> and <a href="privacy.html" class="text-accent-500 underline">Privacy Policy</a>.
+      </p>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="bg-dark-800 border-b border-dark-700 sticky top-0 z-40">
+    <div class="container-custom">
+      <div class="hidden md:flex justify-between items-center py-2 text-sm text-gray-400 border-b border-dark-700">
+        <div class="flex gap-6">
+          <a href="tel:+14502900340" class="hover:text-white transition-colors">📞 (450) 290-0340</a>
+          <span>📍 Kahnawake, Quebec</span>
+        </div>
+        <div class="flex gap-4">
+          <!-- Social media links removed -->
+        </div>
+      </div>
+      
+      <nav class="flex items-center justify-between py-4" aria-label="Main navigation">
+        <a href="index.html" class="text-2xl font-display font-bold text-white">
+          Drive <span class="text-accent-500">Thru</span>
+        </a>
+        
+        <ul class="hidden lg:flex items-center gap-8">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="shop.html" class="nav-link">Shop</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="drive-thru.html" class="nav-link">How It Works</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        
+        <div class="hidden md:block relative">
+          <input type="search" id="search-input" placeholder="Search products..." class="input py-2 px-4 pr-10 w-64" aria-label="Search products">
+          <span class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400">🔍</span>
+          <div id="search-results" class="hidden absolute top-full mt-2 w-full bg-dark-800 border border-dark-600 rounded-lg shadow-xl max-h-96 overflow-y-auto z-50"></div>
+        </div>
+        
+        <button id="mobile-menu-toggle" class="lg:hidden p-2 text-gray-300 hover:text-white" aria-expanded="false" aria-label="Toggle menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </nav>
+      
+      <div id="mobile-menu" class="hidden lg:hidden pb-4">
+        <ul class="space-y-3">
+          <li><a href="index.html" class="nav-link block py-2">Home</a></li>
+          <li><a href="shop.html" class="nav-link block py-2">Shop</a></li>
+          <li><a href="about.html" class="nav-link block py-2">About Us</a></li>
+          <li><a href="drive-thru.html" class="nav-link block py-2">How It Works</a></li>
+          <li><a href="blog.html" class="nav-link block py-2">Blog</a></li>
+          <li><a href="contact.html" class="nav-link block py-2">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero -->
+    <section class="bg-gradient-to-br from-dark-900 to-dark-800 py-16">
+      <div class="container-custom text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">About Drive Thru</h1>
+        <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+          Kahnawake's trusted source for premium vape products and exceptional drive-through service
+        </p>
+      </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="section bg-dark-900">
+      <div class="container-custom">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-3xl font-bold mb-6">Our Story</h2>
+            <p class="text-gray-300 mb-4">
+              Founded in the heart of Kahnawake, Drive Thru was born from a simple idea: combine premium quality vape products with the convenience of drive-through service. We recognized that our community needed a reliable, trustworthy source for tobacco and vaping products that respected their time and valued their business.
+            </p>
+            <p class="text-gray-300 mb-4">
+              Since opening our doors, we've grown to become one of the most trusted vape and smoke shops in the region. Our commitment to authentic products, competitive pricing, and exceptional customer service has earned us a loyal customer base throughout Kahnawake and the greater Montreal area.
+            </p>
+            <p class="text-gray-300">
+              We're more than just a retail store—we're part of the community. We sponsor local events, support community initiatives, and strive to be responsible corporate citizens in everything we do.
+            </p>
+          </div>
+          <div class="bg-dark-800 aspect-video rounded-xl flex items-center justify-center text-6xl">
+            🏪
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Values -->
+    <section class="section bg-dark-800">
+      <div class="container-custom">
+        <h2 class="section-heading text-center">Our Core Values</h2>
+        <p class="section-subheading text-center max-w-2xl mx-auto">
+          The principles that guide everything we do
+        </p>
+        
+        <div class="grid md:grid-cols-3 gap-8 mt-12">
+          <div class="card p-8 text-center">
+            <div class="text-5xl mb-4">🎯</div>
+            <h3 class="text-xl font-bold mb-3">Quality First</h3>
+            <p class="text-gray-400">
+              We stock only authentic, premium products from reputable manufacturers. No knock-offs, no compromises.
+            </p>
+          </div>
+          
+          <div class="card p-8 text-center">
+            <div class="text-5xl mb-4">🤝</div>
+            <h3 class="text-xl font-bold mb-3">Community Focus</h3>
+            <p class="text-gray-400">
+              As a locally-owned business, we're committed to supporting and giving back to the Kahnawake community.
+            </p>
+          </div>
+          
+          <div class="card p-8 text-center">
+            <div class="text-5xl mb-4">⚖️</div>
+            <h3 class="text-xl font-bold mb-3">Responsible Retail</h3>
+            <p class="text-gray-400">
+              We strictly enforce age verification and comply with all federal and provincial tobacco regulations.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section bg-dark-900">
+      <div class="container-custom">
+        <h2 class="section-heading text-center">Why Choose Drive Thru?</h2>
+        
+        <div class="grid md:grid-cols-2 gap-8 mt-12">
+          <div class="flex gap-4">
+            <div class="text-3xl flex-shrink-0">✓</div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">Drive-Through Convenience</h3>
+              <p class="text-gray-400">
+                Our unique drive-through service means you can get your products without leaving your vehicle. Perfect for busy schedules or inclement weather.
+              </p>
+            </div>
+          </div>
+          
+          <div class="flex gap-4">
+            <div class="text-3xl flex-shrink-0">✓</div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">Expert Knowledge</h3>
+              <p class="text-gray-400">
+                Our team is trained and knowledgeable about all our products. We can help you find the right device, flavor, or accessory for your needs.
+              </p>
+            </div>
+          </div>
+          
+          <div class="flex gap-4">
+            <div class="text-3xl flex-shrink-0">✓</div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">Competitive Pricing</h3>
+            <p class="text-gray-400">
+              We offer some of the best prices in the region, ensuring you get great value on every purchase.
+            </p>
+            </div>
+          </div>
+          
+          <div class="flex gap-4">
+            <div class="text-3xl flex-shrink-0">✓</div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">Wide Selection</h3>
+              <p class="text-gray-400">
+                From the latest pod systems to classic cigarettes, we carry a comprehensive range of products to meet every customer's preferences.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community Involvement -->
+    <section class="section bg-dark-800">
+      <div class="container-custom">
+        <h2 class="section-heading text-center">Community Involvement</h2>
+        <p class="section-subheading text-center max-w-2xl mx-auto">
+          Proud to support Kahnawake
+        </p>
+        
+        <div class="max-w-3xl mx-auto mt-12 space-y-6 text-gray-300">
+          <p>
+            At Drive Thru, we believe in giving back to the community that has supported us. We're proud sponsors of local sports teams, cultural events, and community initiatives throughout Kahnawake.
+          </p>
+          <p>
+            We also prioritize hiring locally and providing employment opportunities for community members. Many of our team members have been with us since the beginning, and we're committed to their growth and development.
+          </p>
+          <p>
+            We take our responsibility as a tobacco retailer seriously. We work closely with local health authorities to promote responsible use, strictly enforce age restrictions, and provide education about the products we sell.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section bg-gradient-to-r from-primary-900 to-primary-800">
+      <div class="container-custom text-center">
+        <h2 class="text-3xl font-bold mb-4">Ready to Experience the Difference?</h2>
+        <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+          Visit us today and see why we're Kahnawake's favorite vape and smoke shop.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="shop.html" class="btn-primary text-lg px-8 py-4">Browse Products</a>
+          <a href="contact.html" class="btn-outline text-lg px-8 py-4">Visit Our Store</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark-800 border-t border-dark-700">
+    <div class="container-custom py-12">
+      <div class="grid md:grid-cols-4 gap-8 mb-8">
+        <div>
+          <h3 class="font-bold text-lg mb-4">Drive Thru</h3>
+          <p class="text-gray-400 text-sm mb-4">
+            Your trusted local vape and smoke shop in Kahnawake, Quebec. Premium products with drive-through convenience.
+          </p>
+          <!-- Social media links removed -->
+        </div>
+        
+        <div>
+          <h3 class="font-bold text-lg mb-4">Quick Links</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="shop.html" class="text-gray-400 hover:text-white transition-colors">Shop All Products</a></li>
+            <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+            <li><a href="drive-thru.html" class="text-gray-400 hover:text-white transition-colors">How It Works</a></li>
+            <li><a href="events.html" class="text-gray-400 hover:text-white transition-colors">Events</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="font-bold text-lg mb-4">Support</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="faq.html" class="text-gray-400 hover:text-white transition-colors">FAQs</a></li>
+            <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
+            <li><a href="terms.html" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
+            <li><a href="privacy.html" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="font-bold text-lg mb-4">Contact</h3>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li>📍 Route 207, Junction (sud<br>Kahnawake, QC J0L 1B0</li>
+            <li>📞 <a href="tel:+14502900340" class="hover:text-white transition-colors">(450) 290-0340</a></li>
+            <li>✉️ <a href="mailto:info@drivethruvape.ca" class="hover:text-white transition-colors">info@drivethruvape.ca</a></li>
+            <li class="pt-2">
+              <strong class="text-white">Hours:</strong><br>
+              Open Daily: 8 AM - 10 PM<br>
+              Monday - Sunday
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="health-warning mb-6">
+        <strong>⚠️ Mandatory Health Warning:</strong> Tobacco products and vaping products contain nicotine, a highly addictive chemical. Health Canada advises that nicotine can harm adolescent brain development. For adults only (18+).
+      </div>
+      
+      <div class="border-t border-dark-700 pt-6 text-center text-sm text-gray-500">
+        <p>&copy; 2025 Drive Thru. All rights reserved. | Kahnawake, Quebec</p>
+        <p class="mt-2">We comply with all Canadian federal and provincial tobacco and vaping regulations.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/age-gate.js"></script>
+  <script src="js/navigation.js"></script>
+</body>
+</html>
+

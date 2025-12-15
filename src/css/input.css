@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-dark-900 text-gray-100 font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  /* Buttons */
+  .btn {
+    @apply px-6 py-3 rounded-lg font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-dark-900 active:scale-95;
+  }
+  
+  .btn-primary {
+    @apply btn bg-accent-500 text-white hover:bg-accent-600 shadow-lg shadow-accent-500/20 focus:ring-accent-500;
+  }
+  
+  .btn-secondary {
+    @apply btn bg-primary-500 text-white hover:bg-primary-600 focus:ring-primary-500;
+  }
+  
+  .btn-outline {
+    @apply btn border-2 border-dark-600 text-gray-300 hover:bg-dark-800 hover:text-white hover:border-gray-400 focus:ring-gray-300;
+  }
+  
+  /* Cards */
+  .card {
+    @apply bg-dark-800 rounded-xl shadow-xl overflow-hidden border border-dark-700/50 transition-all duration-300 hover:shadow-2xl hover:border-dark-600 hover:-translate-y-1;
+  }
+  
+  .product-card {
+    @apply card cursor-pointer relative;
+  }
+  
+  /* Forms */
+  .input {
+    @apply w-full px-4 py-3 bg-dark-800 border border-dark-700 rounded-lg text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-accent-500/50 focus:border-accent-500 transition-all shadow-inner;
+  }
+  
+  .select {
+    @apply input appearance-none cursor-pointer bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCAyNCAyNCIgc3Ryb2tlPSIjOTA5MGEwIiBzdHJva2Utd2lkdGg9IjIiPjxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0iTTE5IDlsLTcgNy03LTciPjwvcGF0aD48L3N2Zz4=')] bg-no-repeat bg-[right_1rem_center] bg-[length:1.25em_1.25em] pr-10;
+  }
+  
+  .label {
+    @apply block text-sm font-medium text-gray-400 mb-2 uppercase tracking-wide;
+  }
+  
+  /* Navigation */
+  .nav-link {
+    @apply text-gray-400 hover:text-white transition-colors duration-200 font-medium tracking-wide text-sm uppercase;
+  }
+  
+  .nav-link-active {
+    @apply nav-link text-accent-500;
+  }
+  
+  /* Sections */
+  .section {
+    @apply py-20 md:py-32;
+  }
+  
+  .section-heading {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight;
+  }
+  
+  .section-subheading {
+    @apply text-lg md:text-xl text-gray-400 mb-12 font-light leading-relaxed;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Health Warning */
+  .health-warning {
+    @apply bg-dark-900 border border-dark-700 p-4 text-gray-400 text-xs text-center rounded-lg max-w-2xl mx-auto;
+  }
+  
+  /* Age Gate Modal */
+  .modal-overlay {
+    @apply fixed inset-0 bg-dark-900/95 backdrop-blur-md z-50 flex items-center justify-center p-4;
+  }
+  
+  .modal-content {
+    @apply bg-dark-800 rounded-2xl shadow-2xl max-w-lg w-full border border-dark-700 p-8 animate-fadeIn;
+  }
+  
+  /* Product Grid */
+  .product-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8;
+  }
+  
+  /* Badge */
+  .badge {
+    @apply inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-md shadow-sm;
+  }
+  
+  .badge-new {
+    @apply badge bg-accent-500 text-white;
+  }
+  
+  .badge-sale {
+    @apply badge bg-green-600 text-white;
+  }
+  
+  /* Star Rating */
+  .star-rating {
+    @apply flex items-center gap-1 text-yellow-500 text-sm;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  .text-shadow-lg {
+    text-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+  }
+
+  .backdrop-blur-sm {
+    backdrop-filter: blur(8px);
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .inner-shadow {
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.6);
+  }
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Skip to main content link for accessibility */
+.skip-link {
+  @apply absolute -top-96 left-0 bg-accent-500 text-white px-6 py-3 rounded-br-lg focus:top-0 focus:left-0 z-50 transition-all font-bold shadow-xl;
+}
