@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Understanding nicotine strengths in e-liquids. Learn how to choose the right nicotine level based on your smoking habits.">
+  
+  <title>Understanding Nicotine Strengths - Drive Thru Blog</title>
+  
+  <link rel="stylesheet" href="css/output.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div id="age-gate-modal" class="hidden modal-overlay" role="dialog" aria-modal="true" aria-labelledby="age-gate-title" aria-hidden="true">
+    <div class="modal-content p-8">
+      <div class="text-center mb-6">
+        <div class="text-6xl mb-4">🚬</div>
+        <h1 id="age-gate-title" class="text-3xl font-bold mb-2">Age Verification Required</h1>
+        <p class="text-gray-400">You must be of legal age to enter this website.</p>
+      </div>
+      <div id="age-gate-error" class="hidden health-warning mb-4" role="alert">
+        <strong>Access Denied:</strong> You must be at least 18 years old to access this website.
+      </div>
+      <div class="health-warning mb-6">
+        <strong>⚠️ Health Warning:</strong> Tobacco and vaping products contain nicotine, a highly addictive chemical.
+      </div>
+      <div class="text-center mb-6">
+        <p class="text-xl font-semibold text-white mb-4">Are you 18 years of age or older?</p>
+        <div class="flex gap-3">
+          <button id="age-gate-confirm" class="btn-primary flex-1 text-lg py-4">Yes, I'm 18+</button>
+          <button id="age-gate-decline" class="btn-outline flex-1 text-lg py-4">No, I'm Under 18</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header class="bg-dark-800 border-b border-dark-700 sticky top-0 z-40">
+    <div class="container-custom">
+      <nav class="flex items-center justify-between py-4">
+        <a href="index.html" class="text-2xl font-display font-bold text-white">Drive <span class="text-accent-500">Thru</span></a>
+        <ul class="hidden lg:flex items-center gap-8">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="shop.html" class="nav-link">Shop</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="drive-thru.html" class="nav-link">How It Works</a></li>
+          <li><a href="lottery.html" class="nav-link text-yellow-500 font-bold">Lottery</a></li>
+          <li><a href="blog.html" class="nav-link nav-link-active">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <button id="mobile-menu-toggle" class="lg:hidden p-2 text-gray-300 hover:text-white" aria-label="Toggle menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+      </nav>
+      <div id="mobile-menu" class="hidden lg:hidden pb-4">
+        <ul class="space-y-3">
+          <li><a href="index.html" class="nav-link block py-2">Home</a></li>
+          <li><a href="shop.html" class="nav-link block py-2">Shop</a></li>
+          <li><a href="about.html" class="nav-link block py-2">About Us</a></li>
+          <li><a href="drive-thru.html" class="nav-link block py-2">How It Works</a></li>
+          <li><a href="lottery.html" class="nav-link block py-2 text-yellow-500 font-bold">Lottery</a></li>
+          <li><a href="blog.html" class="nav-link block py-2 text-accent-500">Blog</a></li>
+          <li><a href="contact.html" class="nav-link block py-2">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="bg-dark-900 py-4 border-b border-dark-800">
+      <div class="container-custom">
+        <nav class="text-sm text-gray-400">
+          <a href="index.html" class="hover:text-white">Home</a>
+          <span class="mx-2">›</span>
+          <a href="blog.html" class="hover:text-white">Blog</a>
+          <span class="mx-2">›</span>
+          <span class="text-white">Understanding Nicotine Strengths</span>
+        </nav>
+      </div>
+    </div>
+
+    <article class="section bg-dark-900">
+      <div class="container-custom">
+        <div class="max-w-3xl mx-auto">
+          <header class="mb-8">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="text-sm text-gray-400">January 3, 2025</span>
+              <span class="text-sm text-gray-400">• Education</span>
+              <span class="text-sm text-gray-400">• 7 min read</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Understanding Nicotine Strengths: Which is Right for You?</h1>
+            <p class="text-xl text-gray-300">Choosing the right nicotine level is crucial for a satisfying vaping experience. Learn about different strengths and how to find what works best for your needs.</p>
+          </header>
+
+          <div class="aspect-video bg-dark-700 rounded-xl flex items-center justify-center text-8xl mb-8">💨</div>
+
+          <div class="prose prose-invert max-w-none">
+            <div class="health-warning my-6">
+              <strong>⚠️ Important:</strong> Nicotine is highly addictive. This guide is intended for adult smokers considering vaping as an alternative to cigarettes.
+            </div>
+
+            <h2 class="text-2xl font-bold mt-8 mb-4 text-white">How Nicotine Strength is Measured</h2>
+            <p class="text-gray-300 mb-4 leading-relaxed">
+              Nicotine strength in e-liquids is measured in milligrams per milliliter (mg/mL) or as a percentage. These are equivalent:
+            </p>
+            <ul class="list-disc list-inside text-gray-300 mb-4 space-y-2">
+              <li>3mg/mL = 0.3%</li>
+              <li>6mg/mL = 0.6%</li>
+              <li>12mg/mL = 1.2%</li>
+              <li>20mg/mL = 2.0%</li>
+              <li>50mg/mL = 5.0%</li>
+            </ul>
+
+            <h2 class="text-2xl font-bold mt-8 mb-4 text-white">Freebase vs. Salt Nicotine</h2>
+            <p class="text-gray-300 mb-4 leading-relaxed">
+              There are two types of nicotine used in e-liquids, and understanding the difference is important:
+            </p>
+
+            <h3 class="text-xl font-semibold mt-6 mb-3 text-white">Freebase Nicotine</h3>
+            <p class="text-gray-300 mb-4 leading-relaxed">
+              The traditional form of nicotine in e-liquids. It's harsher at higher concentrations, so it's typically used at lower strengths (3-12mg). Best for sub-ohm devices that produce large clouds.
+            </p>
+
+            <h3 class="text-xl font-semibold mt-6 mb-3 text-white">Nicotine Salt (Nic Salt)</h3>
+            <p class="text-gray-300 mb-4 leading-relaxed">
+              A newer formulation that's smoother at high concentrations (20-50mg). Designed for pod systems and low-power devices. Provides faster nicotine absorption similar to cigarettes.
+            </p>
+
+            <h2 class="text-2xl font-bold mt-8 mb-4 text-white">Choosing Based on Smoking Habits</h2>
+            <p class="text-gray-300 mb-4 leading-relaxed">
+              Your smoking history is the best guide for choosing initial nicotine strength:
+            </p>
+
+            <div class="bg-dark-800 rounded-xl p-6 my-6">
+              <h3 class="text-lg font-bold mb-4 text-white">🚬 Heavy Smokers (20+ cigarettes/day)</h3>
+              <p class="text-gray-300 mb-2"><strong class="text-accent-400">Recommended:</strong> 20-50mg salt nicotine (pod systems) or 12-18mg freebase</p>
+              <p class="text-gray-400 text-sm">You'll need higher nicotine to match the intake you're used to. Salt nicotine in pod systems is usually the best choice.</p>
+            </div>
+
+            <div class="bg-dark-800 rounded-xl p-6 my-6">
+              <h3 class="text-lg font-bold mb-4 text-white">🚬 Moderate Smokers (10-20 cigarettes/day)</h3>
+              <p class="text-gray-300 mb-2"><strong class="text-accent-400">Recommended:</strong> 12-20mg salt nicotine or 6-12mg freebase</p>
+              <p class="text-gray-400 text-sm">A medium strength should satisfy cravings without being overwhelming.</p>
+            </div>
+
+            <div class="bg-dark-800 rounded-xl p-6 my-6">
+              <h3 class="text-lg font-bold mb-4 text-white">🚬 Light Smokers (less than 10 cigarettes/day)</h3>
+              <p class="text-gray-300 mb-2"><strong class="text-accent-400">Recommended:</strong> 6-12mg salt nicotine or 3-6mg freebase</p>
+              <p class="text-gray-400 text-sm">Lower strengths will match your lighter nicotine intake.</p>
+            </div>
+
+            <div class="bg-dark-800 rounded-xl p-6 my-6">
+              <h3 class="text-lg font-bold mb-4 text-white">🚭 Social/Occasional Smokers</h3>
+              <p class="text-gray-300 mb-2"><strong class="text-accent-400">Recommended:</strong> 3-6mg or even 0mg</p>
+              <p class="text-gray-400 text-sm">If you only smoke occasionally, you may not need much nicotine at all.</p>
+            </div>
+
+            <h2 class="text-2xl font-bold mt-8 mb-4 text-white">Signs You Have the Wrong Strength</h2>
+            
+            <h3 class="text-xl font-semibold mt-6 mb-3 text-white">Too Much Nicotine:</h3>
+            <ul class="list-disc list-inside text-gray-300 mb-4 space-y-2">
+              <li>Headaches or dizziness</li>
+              <li>Nausea</li>
+              <li>Racing heart</li>
+              <li>Harsh throat hit that's uncomfortable</li>
+              <li>Only need a few puffs to feel satisfied</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mt-6 mb-3 text-white">Too Little Nicotine:</h3>
+            <ul class="list-disc list-inside text-gray-300 mb-4 space-y-2">
+              <li>Constant cravings for cigarettes</li>
+              <li>Vaping excessively without satisfaction</li>
+              <li>Going through e-liquid very quickly</li>
+              <li>Irritability or difficulty concentrating</li>
+            </ul>
+
+            <h2 class="text-2xl font-bold mt-8 mb-4 text-white">Stepping Down Over Time</h2>
+            <p class="text-gray-300 mb-4 leading-relaxed">
+              Many vapers gradually reduce their nicotine strength over time. A common progression:
+            </p>
+            <ol class="list-decimal list-inside text-gray-300 mb-4 space-y-2">
+              <li>Start at a level that satisfies cravings (matching your smoking habits)</li>
+              <li>After a few months, drop one level (e.g., 12mg → 6mg)</li>
+              <li>Continue stepping down as comfortable</li>
+              <li>Eventually reach 0mg if desired</li>
+            </ol>
+            <p class="text-gray-300 mb-4 leading-relaxed">
+              There's no rush—reduce at your own pace. Some vapers are happy staying at a certain level indefinitely, and that's okay too.
+            </p>
+
+            <h2 class="text-2xl font-bold mt-8 mb-4 text-white">Device Matters Too</h2>
+            <p class="text-gray-300 mb-4 leading-relaxed">
+              The device you use affects how much nicotine you absorb:
+            </p>
+            <ul class="list-disc list-inside text-gray-300 mb-4 space-y-2">
+              <li><strong class="text-white">Pod systems & MTL devices:</strong> Use higher nicotine (12-50mg salt nic)</li>
+              <li><strong class="text-white">Sub-ohm & DTL devices:</strong> Use lower nicotine (3-6mg freebase)</li>
+            </ul>
+            <p class="text-gray-300 mb-4 leading-relaxed">
+              High-powered devices produce more vapor, so you inhale more nicotine per puff. That's why sub-ohm vapers use lower concentrations.
+            </p>
+
+            <div class="bg-dark-800 rounded-xl p-6 mt-8">
+              <h3 class="text-xl font-bold mb-4 text-white">Need Help Choosing?</h3>
+              <p class="text-gray-300 mb-4">Our staff at Drive Thru can recommend the perfect nicotine strength based on your smoking history and device preference.</p>
+              <a href="contact.html" class="btn-primary inline-block">Ask Us</a>
+            </div>
+          </div>
+
+          <div class="border-t border-dark-700 mt-12 pt-8">
+            <div class="flex items-center justify-between flex-wrap gap-4">
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 bg-accent-500 rounded-full flex items-center justify-center text-white font-bold text-lg">DT</div>
+                <div>
+                  <p class="font-semibold text-white">Drive Thru Team</p>
+                  <p class="text-sm text-gray-400">Kahnawake's Vaping Experts</p>
+                </div>
+              </div>
+              <a href="blog.html" class="btn-outline">← Back to Blog</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="bg-dark-800 border-t border-dark-700">
+    <div class="container-custom py-12">
+      <div class="health-warning mb-6">
+        <strong>⚠️ Mandatory Health Warning:</strong> Tobacco products and vaping products contain nicotine, a highly addictive chemical. For adults only (18+).
+      </div>
+      <div class="border-t border-dark-700 pt-6 text-center text-sm text-gray-500">
+        <p>&copy; 2025 Drive Thru. All rights reserved. | Kahnawake, Quebec</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/age-gate.js"></script>
+  <script src="js/navigation.js"></script>
+</body>
+</html>
+
