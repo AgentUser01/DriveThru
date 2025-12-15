@@ -4,8 +4,8 @@ package-lock.json
 yarn.lock
 
 # Build outputs
-dist/css/output.css
-# Keep dist/js files tracked (they're needed for deployment)
+docs/css/output.css
+# Keep docs/js files tracked (they're needed for deployment)
 
 # IDE
 .vscode/

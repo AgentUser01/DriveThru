@@ -4,9 +4,9 @@
   "description": "Modern, mobile-first website for Drive Thru - a cigarette & vape store in Kahnawake, Quebec",
   "main": "index.html",
   "scripts": {
-    "dev": "npx tailwindcss -i ./src/css/input.css -o ./dist/css/output.css --watch",
-    "build": "mkdir -p dist/js && cp src/js/*.js dist/js/ && npx tailwindcss -i ./src/css/input.css -o ./dist/css/output.css --minify",
-    "serve": "npx live-server ./dist"
+    "dev": "npx tailwindcss -i ./src/css/input.css -o ./docs/css/output.css --watch",
+    "build": "mkdir -p docs/js && cp src/js/*.js docs/js/ && npx tailwindcss -i ./src/css/input.css -o ./docs/css/output.css --minify",
+    "serve": "npx live-server ./docs"
   },
   "keywords": [
     "vape",
